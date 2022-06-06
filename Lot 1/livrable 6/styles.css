@@ -1,0 +1,903 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.home-container {
+    min-height: 100vh;
+    background: url(images/bg.jpg);
+    background-size: cover;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Barre de navigation*/ 
+
+.logo {
+    width: 180px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 40px;
+    overflow: hidden;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.nav-links input{
+    border-radius: 2em;
+    padding: 1px;
+    outline: none;
+    border: none;
+    width: 100px;
+}
+.nav-links a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+}
+
+.nav-links a:hover {
+    transform: translateY(-100%);
+}
+
+
+.landing {
+    line-height: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+}
+
+.big-title {
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 100;
+}
+
+.delivery-link {
+    line-height: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    width: 70px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.scroll-text {
+    color: white;
+    position: relative;
+    transition: transform 0.4s;
+}
+
+.scroll-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+}
+
+.scroll-text:hover {
+    transform: translateY(-100%);
+}
+
+.scroll-icon {
+    font-size: 25px;
+    color: white;
+}
+
+
+
+
+/* Icones livraisons*/ 
+
+.delivery-container {
+    min-height: 300px;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.delivery-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delivery-icon {
+    font-size: 50px;
+    color: #ADD981;
+}
+
+.delivery-container .box-content {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 220px;
+    text-align: center;
+}
+
+
+
+
+
+
+/*Accueil et promos */
+
+.best-sales-container {
+    min-height: 60vh;
+    background: white;
+    padding: 0 100px;
+}
+
+.section-title {
+    position: relative;
+    font-family: "Abril Fatface", cursive;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+h2{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-decoration:  underline rgb(93, 219, 21);
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 7px;
+    background: #ADD981;
+    bottom: 0;
+    box-shadow: 0 2px 2px #0000001F;
+}
+
+.best-plants {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plant1 {
+    background: url(images/nos_promotions/1.jpg);
+}
+
+.plant2 {
+    background: url(images/nos_promotions/2.jpg);
+}
+
+.plant3 {
+    background: url(images/nos_promotions/3.jpg);
+}
+
+.plant4 {
+    background: url(images/nos_promotions/4.jpg);
+}
+
+.plant-box::before {
+    content: "En savoir plus";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFFDF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -100%;
+    transition: left 0.4s;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.plant-box:hover::before {
+    left: 0;
+}
+
+.plant-bio {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    background: #FFFFFFDF;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.plant-name {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.plant-price {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+/*Nos plantes*/
+
+
+
+.plants-container {
+    padding: 0 100px;
+    min-height: 150vh;
+    margin-top: 50px;
+}
+
+.grid-plants {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 400px);
+}
+
+.plant-grid1 {
+    background: url(images/nos_plantes/1.jpg);
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.plant-grid2 {
+    background: url(images/nos_plantes/2.jpg);
+    grid-column: 3 / 5;
+}
+
+.plant-grid3 {
+    background: url(images/nos_plantes/3.jpg);
+    grid-column: 3 / 5;
+}
+
+.plant-grid4 {
+    background: url(images/nos_plantes/4.jpg);
+    grid-column: 1;
+    grid-row: 3 / 5;
+}
+
+.plant-grid5 {
+    background: url(images/nos_plantes/5.jpg);
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+}
+
+.plant-grid6 {
+    background: url(images/nos_plantes/6.jpg);
+    grid-column: 4;
+    grid-row: 3 / 5;
+}
+
+.plant-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+    transition: background 0.4s;
+}
+
+.no-grid {
+    height: 500px;
+    flex: 1;
+    min-width: 350px;
+}
+
+.footer {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: space-between;
+    padding: 0 100px;
+    flex-wrap: wrap;
+    background: linear-gradient(0deg,rgb(177, 175, 175),10%, white);
+}
+
+
+.team .copyright{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Description produit*/
+
+.product-tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product-container {
+    padding: 0 50px;
+    min-height: 80vh;
+    margin-top: 50px;
+}
+
+.img-product{
+margin-right: 50px;
+}
+
+.product-text{
+flex-wrap: wrap;
+}
+
+.pros {
+    font-weight: bold;
+    padding-top: 100px;
+}
+.pros2 li{
+    margin: 2em;
+}
+
+.text, .text2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 2em;
+    text-align: justify;
+}
+
+.plant-price-column{
+margin-left: 50px;
+}
+.plant-price-box{
+    height: 300px;
+    width: 350px;   
+    box-shadow: rgb(153 153 153 / 40%) 0px 2px 5px;
+
+}
+
+.plant-price-box2{
+    position: inherit;
+    padding-top: 50px;
+    margin: 50px;
+    /*box-shadow:rgb(153 153 153 / 40%) 0px 2px 5px; */
+}
+
+.price-tag{
+    font-family: "Abril Fatface", cursive;
+    font-size: 60px;
+    text-align: left;
+    margin: 0px -5px 20px;
+}
+
+.unit{
+    font-family: "Abril Fatface", cursive;
+    text-align: right;
+    font-size: 30px;
+
+}
+
+.add-button{
+    display: inline-block;
+    position: relative;
+    padding: 1.5em;
+    margin: -50px 0px 0 30%;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: limegreen;
+    transition: background-color 0.4s;
+}
+
+.add-button:hover{
+    background: rgb(6, 124, 6);
+    cursor: pointer;
+}
+
+.deliveries{
+   margin-top: 50px;
+   text-align: center;
+}
+
+.delivery-mode{
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+.delivery-choice li{
+    padding: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Panier*/
+
+.panier{
+    background: white;
+    padding: 0 100px;
+    margin-top: 50px;
+}
+
+.panier-tab{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top:60px;
+}
+
+.article, .total{
+    margin-bottom:40px;
+    box-shadow: rgb(153 153 153 / 40%) 0px 2px 5px;
+    background: rgb(241, 241, 232);
+}
+
+.article-description{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    margin-left: 3em;
+}
+
+
+.article-unit-price{
+    margin-top: 2em;
+}
+
+.article-info{
+    padding-left: 2em;
+    padding-top:1em;
+}
+
+.far{
+    margin-top: 1em;
+    top: -35px; left: 90px;
+}
+
+.article-total{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    font-weight: bolder;
+}
+
+table{
+    margin-top: 1em;
+    border-collapse: collapse;
+    
+}
+td{
+    border: 2px solid grey;
+    padding: 0.5em;
+}
+
+.total-products, .total-delivery{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin : 1em;
+    font-weight: bolder;
+}
+
+hr{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    width: 95%;
+}
+.total-price{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin : 2em;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.buy-button{
+    display: inline-block;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 75px;
+    background: limegreen;
+    transition: background-color 0.4s;
+}
+.buy-button:hover{
+    background: rgb(6, 124, 6);
+    cursor: pointer;
+}
+
+.total-buy{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Achat*/
+
+.achat{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accueil-button{
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Qui Sommes-nous ?*/
+
+.qui-sommes-nous {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.map{
+    margin-top: 2em;
+    border: 2px solid rgb(90, 36, 36);
+}
+
+
+
+
+
+
+
+
+/*Details techniques*/
+
+.details{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    min-height: 80vh;
+    margin-top: 50px;
+}
+
+.description{
+    margin: 2em 0;
+
+}
+.description li{
+    margin-top: 0.5em;
+}
+
+.details-text{
+    line-height: 1.5em;
+}
+
+
+
+
+
+/*Connexion*/
+
+.connexion{
+    background: white;
+    padding: 0 100px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+/*Inscription*/
+.inscription{
+    background: white;
+    padding: 0 100px;
+    margin-top: 50px;
+}
+
+@media (max-width: 1500px) {
+
+    .product-tab, .img-product{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 400px;
+    }
+
+
+
+
+    .delivery-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    .delivery-container div {
+        margin: 30px;
+    }
+
+    .article-description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .article-image img{
+        width: 150px;
+        height: auto;
+    }
+
+    .article-info{
+        text-align: left;
+
+    }
+
+
+    .grid-plants, .product-tab{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .img-product{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 25px;
+    }
+    .grid {
+        flex: 1;
+        min-width: 350px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    .landing,
+    .header,
+    .best-sales-container,
+    .plants-container,
+    .footer,
+    .product-container,
+    .panier,
+    .qui-sommes-nous
+    {
+        padding: 0 7%;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .big-title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-top: 400px;
+    }
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+
+    .plant-box {
+        min-width: 300px;
+    }
+
+    .plant-name,
+    .plant-box::before {
+        font-size: 20px;
+    }
+    
+    .plant-price-box{
+        width: 300px;
+    }
+
+    .plant-price-column{
+        margin-left: 0;
+    }
+    .unit{
+        text-align: center;
+    }
+    .img-product img{
+        width: 300px;
+        height: auto;
+    }
+
+    .plant-price {
+        font-size: 10px;
+    }
+    .buy-button{
+        padding: 1em;
+        font-size: 1em;
+    }
+    .total-price{
+        margin: 1em;
+        font-size: 1em;
+    }
+    .article-info{
+        font-size: 0.7em;
+    }
+    td{
+        padding: 0.2em;
+    }
+    .shop img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+
+    .nav-links a{
+        font-size: 11px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+}
