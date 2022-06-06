@@ -15,11 +15,15 @@ Tutoriel pour avoir le site Web et la base de donnees sur votre Xampp :
 
 6- Lancez Apache et MySql puis cliquez respectivement sur "Admin" pour acceder au site ainsi qu'a la base de donnees.
 
+
+
 Identifiants Compte client web :
 
 email : adresse@gmail.com
 
 password : motdepasse
+
+
 
 
 Identifiants admin de l'application de gestion de stock :
